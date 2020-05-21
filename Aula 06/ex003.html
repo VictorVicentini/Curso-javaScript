@@ -20,10 +20,19 @@
     <p>Já me Livrei da Maldição.</p>
 
     <script>
-      var n1= Number.parseInt(window.prompt("Digite um número:"))
+      //var n1= Number.parseInt(window.prompt("Digite um número:"))//converte para Inteiro
+      var n1= Number.parseFloat(window.prompt("Digite um número:"))//converte para real
+      //var n1= Number(window.prompt("Digite um número:")) //O próprio javaScript define se é inteiro ou real
+
+      
+
       var n2 = Number.parseInt(window.prompt("Digite outro número:"))
       var s= n1+n2
-      window.alert("O valor da soma é: "+s)
+      //para string funiona do mesmo jeito "Strig(n)" ou "n.toString"
+      // window.alert("O valor da soma é: "+s.toString)
+      //window.alert("O valor da soma é: "+String(s))
+      window.alert(`O valor da Soma é ${s}`)//usando placeholder
+
     </script>
 
 </body>
