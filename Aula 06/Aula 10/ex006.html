@@ -19,16 +19,23 @@
 </head>
 
 <body>
-    <div id="area" onclick="clicar()" onmouseenter='entrar()' onmouseout="sair()">
+    <!--<div id="area" onclick="clicar()" onmouseenter='entrar()' onmouseout="sair()">
+        intereja...
+    </div>-->
+
+    <div id="area">
         intereja...
     </div>
 
     <script>
         var a = window.document.getElementById('area')
+        a.addEventListener("click", clicar)
+        a.addEventListener("mouseenter",entrar)
+        a.addEventListener("mouseout",sair)
         function clicar(){
             //var a = window.document.getElementById('area')
             a.innerText='clicou...'
-            a.style.backgroud='red'
+            a.style.background='red'
 
         }
 
@@ -41,6 +48,8 @@
         function sair(){
             //var a = window.document.getElementById('area')
             a.innerText='saiu...'
+            a.style.background=' rgb(24, 133, 87)'
+
 
         }
     </script>
