@@ -16,9 +16,47 @@
 
 <body>
     <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o resultado<p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em javaScript</p>
-            <div>Click em mim</div>
+    <p>Aqui vai o resultado</p>
+            <p>Aprendendo a usar o <strong>DOM</strong> em javaScript</p>
+            <div id="msg" name ="msg1" class="msg2">Click em mim</div>
+            <script>
+                /*window.document.write("Olá, Mundo!<br>")
+                window.document.write(window.document.charset+"<br>")
+                window.document.write(window.navigator.appName+"<br>")
+                window.document.write(window.document.URL)*/
+
+                //pegando objeto por Marca
+                var p1 = window.document.getElementsByTagName('p')[1]
+                window.document.write(p1.innerText+"<br>")//ineerText pega o conteúdo do parágrafo sem formatação html
+                window.document.write(p1.innerHTML)
+                p1.style.color="#666666"
+
+                var corpo = window.document.body
+                corpo.style.background="#cecece"
+
+                //Selecionando por id
+                /*var d= window.document.getElementById('msg')
+                d.style.background = "green"
+                d.innerText="Estou Aguardando..."*/
+
+                //selecionando por name
+                /*var d = window.document.getElementsByName("msg1")[0]
+                d.innerText="Olá!"*/
+
+                //selecionando por class
+                //var d = window.document.getElementsByClassName("msg2")[0]
+                //d.innerText="Mundo!"
+
+                //selecionando por seletor
+                //var d = window.document.getElementsByClassName("msg2")[0]
+                //d.innerText="Mundo!"
+
+                var d= window.document.querySelector("div#msg")
+                d.style.background="#c66ecc"
+
+
+
+            </script>
 </body>
 
 </html>
